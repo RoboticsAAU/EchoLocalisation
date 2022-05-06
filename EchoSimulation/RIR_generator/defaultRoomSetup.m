@@ -6,7 +6,7 @@ setup.room.distSourceToReceiv=0;
 Dest=setup.room.distSourceToReceiv/setup.room.soundSpeed...
     *setup.signal.sampFreq;
 setup.room.distToWall=1;
-setup.room.sourcePos=[roomConstants.po,position(2),position(3)];
+setup.room.sourcePos=[roomConstants.robotPos(1),roomConstants.robotPos(2),roomConstants.robotPos(3)];
 
 for kk=1:setup.array.micNumber
     setup.room.receivPos(kk,:)=[...
