@@ -1,12 +1,12 @@
-function [setup] = defaultRoomSetup(setup, roomConstants)
-setup.room.dimensions=[roomConstants.length,roomConstants.width,roomConstants.height];
+function [setup] = defaultRoomSetup(setup, RIRconstants)
+setup.room.dimensions=[RIRconstants.roomLength,RIRconstants.roomWidth,RIRconstants.roomHeight];
 setup.room.T60=0.6;
-setup.room.soundSpeed=343;
+setup.room.soundSpeed=RIRconstants.SpeedofSound;
 setup.room.distSourceToReceiv=0;
 Dest=setup.room.distSourceToReceiv/setup.room.soundSpeed...
     *setup.signal.sampFreq;
 setup.room.distToWall=1;
-setup.room.sourcePos=[roomConstants.robotPos(1),roomConstants.robotPos(2),roomConstants.robotPos(3)];
+setup.room.sourcePos=[RIRconstants.robotPos(1),RIRconstants.robotPos(2),RIRconstants.robotPos(3)];
 
 for kk=1:setup.array.micNumber
     setup.room.receivPos(kk,:)=[...
