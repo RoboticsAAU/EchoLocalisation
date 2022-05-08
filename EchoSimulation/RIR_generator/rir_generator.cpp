@@ -123,61 +123,12 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 {
     if (nrhs == 0)
     {
-        mexPrintf("--------------------------------------------------------------------\n"
-            "| Room Impulse Response Generator                                  |\n"
-            "|                                                                  |\n"
-            "| Computes the response of an acoustic source to one or more       |\n"
-            "| microphones in a reverberant room using the image method [1,2].  |\n"
-            "|                                                                  |\n"
-            "| Author    : dr.ir. Emanuel Habets (ehabets@dereverberation.org)  |\n"
-            "|                                                                  |\n"
-            "| Version   : 2.1.20141124                                         |\n"
-            "|                                                                  |\n"
-            "| Copyright (C) 2003-2014 E.A.P. Habets, The Netherlands.          |\n"
-            "|                                                                  |\n"
-            "| [1] J.B. Allen and D.A. Berkley,                                 |\n"
-            "|     Image method for efficiently simulating small-room acoustics,|\n"
-            "|     Journal Acoustic Society of America,                         |\n"
-            "|     65(4), April 1979, p 943.                                    |\n"
-            "|                                                                  |\n"
-            "| [2] P.M. Peterson,                                               |\n"
-            "|     Simulating the response of multiple microphones to a single  |\n"
-            "|     acoustic source in a reverberant room, Journal Acoustic      |\n"
-            "|     Society of America, 80(5), November 1986.                    |\n"
-            "--------------------------------------------------------------------\n\n"
-            "function [h, beta_hat] = rir_generator(c, fs, r, s, L, beta, nsample,\n"
-            " mtype, order, dim, orientation, hp_filter);\n\n"
-            "Input parameters:\n"
-            " c           : sound velocity in m/s.\n"
-            " fs          : sampling frequency in Hz.\n"
-            " r           : M x 3 array specifying the (x,y,z) coordinates of the\n"
-            "               receiver(s) in m.\n"
-            " s           : 1 x 3 vector specifying the (x,y,z) coordinates of the\n"
-            "               source in m.\n"
-            " L           : 1 x 3 vector specifying the room dimensions (x,y,z) in m.\n"
-            " beta        : 1 x 6 vector specifying the reflection coefficients\n"
-            "               [beta_x1 beta_x2 beta_y1 beta_y2 beta_z1 beta_z2] or\n"
-            "               beta = reverberation time (T_60) in seconds.\n"
-            " nsample     : number of samples to calculate, default is T_60*fs.\n"
-            " mtype       : [omnidirectional, subcardioid, cardioid, hypercardioid,\n"
-            "               bidirectional], default is omnidirectional.\n"
-            " order       : reflection order, default is -1, i.e. maximum order.\n"
-            " dim         : room dimension (2 or 3), default is 3.\n"
-            " orientation : direction in which the microphones are pointed, specified using\n"
-            "               azimuth and elevation angles (in radians), default is [0 0].\n"
-            " hp_filter   : use 'false' to disable high-pass filter, the high-pass filter\n"
-            "               is enabled by default.\n\n"
-            "Output parameters:\n"
-            " h           : M x nsample matrix containing the calculated room impulse\n"
-            "               response(s).\n"
-            " beta_hat    : In case a reverberation time is specified as an input parameter\n"
-            "               the corresponding reflection coefficient is returned.\n\n");
+
         return;
     }
     else
     {
-        mexPrintf("Room Impulse Response Generator (Version 2.1.20141124) by Emanuel Habets\n"
-            "Copyright (C) 2003-2014 E.A.P. Habets, The Netherlands.\n");
+
     }
 
     // Check for proper number of arguments
