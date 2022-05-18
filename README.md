@@ -12,7 +12,8 @@
 - Audio Toolbox
 - Image Processing Toolbox
 - DSP System Toolbox
-- ROS Toolbox__
+- ROS Toolbox
+
 **May also need**
 - Model Predictive Control Toolbox
 - Deep Learning Toolbox
