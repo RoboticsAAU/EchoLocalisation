@@ -13,10 +13,10 @@
 - Image Processing Toolbox
 - DSP System Toolbox
 - ROS Toolbox
+- Simulink
+- Simulink Real-Time
 
 **May also need**
 - Model Predictive Control Toolbox
 - Deep Learning Toolbox
 - Reinforcement Learning Toolbox
-- Simulink
-- Simulink Real-Time
